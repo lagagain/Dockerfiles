@@ -1,3 +1,9 @@
+
+* Poll Docker
+#+begin_src shell
+docker pull lagagain/rails
+#+end_src
+
 * RUN Rails
 ** init
  #+begin_src shell
@@ -10,3 +16,6 @@ docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app -p 8080:3000 lagagain
 # or
 docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app -p 8080:3000 lagagain/rails rails server
 #+end_src
+
+
+* Build Docker
