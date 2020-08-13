@@ -1,0 +1,12 @@
+* RUN Rails
+** init
+ #+begin_src shell
+   docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app lagagain/rails bundle install
+   docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app lagagain/rails rails webpacker:install
+ #+end_src
+** start server
+#+begin_src shell
+docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app -p 8080:3000 lagagain/rails
+# or
+docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app -p 8080:3000 lagagain/rails rails server
+#+end_src
